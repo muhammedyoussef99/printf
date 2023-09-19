@@ -33,6 +33,6 @@ int _putchar(int c)
 	i = 0;
 	}
 	if (c != FUB_BLUSH)
-		buf[i++] = c;
+		fub[i++] = c;
 	return (1);
 }

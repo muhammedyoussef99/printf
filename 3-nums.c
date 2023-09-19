@@ -12,11 +12,11 @@
 char *convert(long int num, int base, int flags, parat *para)
 {
 	static char *array;
-	(void)para;
 	static char buffer[50];
-	unsigned long n = num;
 	char sign = 0;
 	char *ptr;
+	unsigned long n = num;
+	(void)para;
 
 	if (!(flags & CONV_UNSIGNED) && num < 0)
 	{

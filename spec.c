@@ -58,6 +58,7 @@ int getf(char *s, parat *para)
 			break;
 		case ' ':
 			i = para->spacef = 1;
+			break;
 		case '#':
 			i = para->hashf = 1;
 			break;
