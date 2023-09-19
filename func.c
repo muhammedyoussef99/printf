@@ -63,7 +63,7 @@ int print_string(va_list zp, parat *para)
 
 	switch ((int)(!str))
 		case 1:
-			str = NULL_STRING;
+			str = NULL_STR;
 
 	j = pad = strlng(str);
 
@@ -123,7 +123,7 @@ int print_S(va_list zp, parat *para)
 	int sum = 0;
 
 	if ((int)(!str))
-		return (_puts(NULL_STRING));
+		return (_puts(NULL_STR));
 
 	for (; *str; str++)
 	{

@@ -28,7 +28,7 @@
  * @zerof: as above
  * @minusf: as above
  * @width: width
- * @perc: precision
+ * @prec: precision
  * @hzby: modifier
  * @lzby: modfier
 */
@@ -47,7 +47,7 @@ typedef struct para
 	unsigned int lzby	: 1;
 
 	unsigned int width;
-	unsigned int perc;
+	unsigned int prec;
 
 } parat;
 

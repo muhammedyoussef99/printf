@@ -25,7 +25,7 @@ char *get_precision(char *p, parat *para, va_list zp)
 	}
 	else
 	{
-		while (_isdigit(*p))
+		while (fdigit(*p))
 			k = k * 10 + (*p++ - '0');
 	}
 	para->prec = k;

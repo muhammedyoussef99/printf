@@ -32,7 +32,7 @@ int (*get_spec(char *s))(va_list zp, parat * para)
 	{
 		if (*s == specs[i].spec[0])
 		{
-			return (specifiers[i].f);
+			return (specs[i].f);
 		}
 		i++;
 	}
@@ -88,7 +88,7 @@ int get_zby(char *s, parat *para)
 			i = para->hzby = 1;
 			break;
 		case 'l':
-			i = params->lzby = 1;
+			i = para->lzby = 1;
 			break;
 	}
 	return (i);
