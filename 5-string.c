@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_precision - Parses and retrieves
+ * get_prec - Parses and retrieves
  *		the precision field from a format string.
  * @p: A pointer to the format string.
  * @para: A pointer to the parameters structure.
@@ -9,7 +9,7 @@
  *
  * Return: A pointer to the next character in the format string after parsing.
  */
-char *get_precision(char *p, parat *para, va_list zp)
+char *get_prec(char *p, parat *para, va_list zp)
 {
 	int k = 0;
 
