@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include <limits.h>
 
 /**
  * print_hex - Prints an unsigned integer as a hexadecimal number in lowercase.
