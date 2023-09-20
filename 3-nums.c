@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include <limits.h>
 
 /**
  * convert - Converts a number to a specified base and format.
