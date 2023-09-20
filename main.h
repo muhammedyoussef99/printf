@@ -78,7 +78,7 @@ int print_unsigned(va_list zp, parat *para);
 int print_address(va_list zp, parat *para);
 
 int (*get_spec(char *s))(va_list zp, parat *para);
-int get_print_func(char *s, va_list zp, parat *para);
+int get_func(char *s, va_list zp, parat *para);
 int getf(char *s, parat *para);
 int get_zby(char *s, parat *para);
 char *get_width(char *s, parat *para, va_list zp);
@@ -92,8 +92,8 @@ int print_from_to(char *start, char *stop, char *except);
 int print_rev(va_list zp, parat *para);
 int print_rot13(va_list zp, parat *para);
 
-int fdigit(int c);
-int strlng(char *s);
+int _isdigit(int c);
+int _strlen(char *s);
 int print_number(char *str, parat *para);
 int print_number_right_shift(char *str, parat *para);
 int print_number_left_shift(char *str, parat *para);

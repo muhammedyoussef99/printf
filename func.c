@@ -1,5 +1,11 @@
 #include "main.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <limits.h>
+
 /**
  * print_char - print character
  * @zp: arg pointer
@@ -65,7 +71,7 @@ int print_string(va_list zp, parat *para)
 		case 1:
 			str = NULL_STR;
 
-	j = pad = strlng(str);
+	j = pad = _strlen(str);
 
 	if (para->prec < pad)
 		j = pad = para->prec;

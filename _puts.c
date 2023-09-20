@@ -1,5 +1,11 @@
 #include "main.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <limits.h>
+
 /**
  * _puts - Prints a string followed by a newline character.
  * @str: The string to be printed.

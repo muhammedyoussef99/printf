@@ -1,5 +1,11 @@
 #include "main.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <limits.h>
+
 /**
  * get_prec - Parses and retrieves
  *		the precision field from a format string.
@@ -11,7 +17,7 @@
  */
 char *get_prec(char *p, parat *para, va_list zp)
 {
-	int k = 0;
+	int d = 0;
 
 	if (*p != '.')
 
@@ -19,16 +25,16 @@ char *get_prec(char *p, parat *para, va_list zp)
 	p++;
 	if (*p == '*')
 	{
-		k = va_arg(zp, int);
+		d = va_arg(zp, int);
 		p++;
 
 	}
 	else
 	{
-		while (fdigit(*p))
-			k = k * 10 + (*p++ - '0');
+		while (_isdigit(*p))
+			d = d * 10 + (*p++ - '0');
 	}
-	para->prec = k;
+	para->prec = d;
 
 	return (p);
 }

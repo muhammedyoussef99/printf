@@ -1,5 +1,11 @@
 #include "main.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <limits.h>
+
 /**
  * init_para - clears structed fields and back bufs
  * @para: parameters struction

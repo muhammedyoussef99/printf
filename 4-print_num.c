@@ -1,5 +1,11 @@
 #include "main.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <limits.h>
+
 /**
  * _isdigit - if a character is a digit.
  * @c: Check the character.

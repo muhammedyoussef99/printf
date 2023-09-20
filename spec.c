@@ -1,5 +1,11 @@
 #include "main.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <limits.h>
+
 /**
  * get_spec - find format function
  * @s: format string
@@ -39,6 +45,22 @@ int (*get_spec(char *s))(va_list zp, parat * para)
 	return (NULL);
 }
 
+/**
+ * get_func - find function format
+ * @s: strind format
+ * @zp: arg pointer
+ * @para: parameters struction
+ * Return: number of bytes to be print
+*/
+
+int get_func(char *s, va_list zp, parat *para)
+{
+	int (*f)(va_list, parat *) = get_spec(s);
+
+	if (f)
+		return (f(zp, para));
+	return (0);
+}
 
 /**
  * getf - find flag function
@@ -75,7 +97,7 @@ int getf(char *s, parat *para)
 /**
  * get_zby - finds modifier function
  * @s: format string
- * @params: parameters struction
+ * @para: parameters struction
  * Return: if modifier is true
 */
 
@@ -114,7 +136,7 @@ char *get_width(char *s, parat *para, va_list zp)
 	}
 	else
 	{
-		while (fdigit(*s))
+		while (_isdigit(*s))
 			d = d * 10 + (*s++ - '0');
 	}
 	para->width = d;

@@ -1,15 +1,21 @@
 #include "main.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <limits.h>
+
 /**
  * convert - Converts a number to a specified base and format.
  * @num: The number to convert.
  * @base: The base for conversion (e.g., 10 for decimal, 16 for hexadecimal).
- * @flags: Flags to control the conversion (e.g., CONVERT_UNSIGNED).
+ * @fl: Flags to control the conversion (e.g., CONVERT_UNSIGNED).
  * @para: A pointer to the parameters structure (not used in this function).
  *
  * Return: A string containing the converted number.
  */
-char *convert(long int num, int base, int flags, parat *para)
+char *convert(long int num, int base, int fl, parat *para)
 {
 	static char *array;
 	static char buffer[50];
@@ -18,12 +24,12 @@ char *convert(long int num, int base, int flags, parat *para)
 	unsigned long n = num;
 	(void)para;
 
-	if (!(flags & CONV_UNSIGNED) && num < 0)
+	if (!(fl & CONV_UNSIGNED) && num < 0)
 	{
 		n = -num;
 		sign = '-';
 	}
-	array = flags & CONV_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+	array = fl & CONV_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 

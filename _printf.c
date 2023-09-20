@@ -1,5 +1,11 @@
 #include "main.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <limits.h>
+
 /**
  * _printf - Custom printf function.
  * @format: The format string.
@@ -42,9 +48,10 @@ int _printf(const char *format, ...)
 			sum += print_from_to(start, p,
 					para.lzby || para.hzby ? p - 1 : 0);
 		else
-			sum += get_print_func(p, zp, &para);
+			sum += get_func(p, zp, &para);
 	}
 	_putchar(FUB_BLUSH);
 	va_end(zp);
+
 	return (sum);
 }
